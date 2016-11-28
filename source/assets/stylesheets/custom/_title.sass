@@ -1,12 +1,19 @@
 .title
   color: $brown
   width: 100%
-  +font-size(mega)
   text-shadow: $grey 4px 4px 0
+  +font-size(gamma)
+
+  +at-breakpoint(tab)
+    +font-size(beta)
+  +at-breakpoint(lap)
+    +font-size(alpha)
+  +at-breakpoint(desk)
+    +font-size(mega)
 
   h1
     span
       @for $i from 1 through 10
         &:nth-child(#{$i})
           position: relative
-          top: -#{$i * 10}px
+          top: -#{$i / 5}rem
