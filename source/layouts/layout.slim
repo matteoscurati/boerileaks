@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    = partial "partials/metadata"
+
+
+    = stylesheet_link_tag :application
+  body class= page_classes
+    = yield
+    = javascript_include_tag :application
